@@ -9,7 +9,7 @@ def export_content(section, api_key, date_start=None, date_end=None, qtt_results
     api = ApiConsumer(api_key=api_key)
     writer = CsvWriter()
 
-    ret = api.search_content(section=section)
+    ret = api.search_content(section=section, date_start=date_start, date_end=date_end, qtt_results=qtt_results)
     results = ret["response"]["results"]
     writer.write_file(json_content=results)
 
