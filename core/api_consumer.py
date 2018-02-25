@@ -4,7 +4,7 @@ import requests
 import json
 import datetime
 
-class Api_Consumer():
+class ApiConsumer():
 
     def __init__(self, api_key):
         self.BASE_URL = "https://content.guardianapis.com"
