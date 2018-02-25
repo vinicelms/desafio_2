@@ -2,7 +2,6 @@
 
 import csv
 import datetime
-import json
 
 class CsvWriter():
 
