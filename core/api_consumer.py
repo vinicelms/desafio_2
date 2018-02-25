@@ -10,8 +10,11 @@ class Api_Consumer():
         self.BASE_URL = "https://content.guardianapis.com"
         self.API_KEY = api_key
 
-    def search_content(self, section, date_start=None, date_end=None, qtt_results=10, all_content=False):
+    def search_content(self, section, date_start=None, date_end=None, qtt_results=10):
         req = None
+
+        if qtt_results > 50:
+            raise ValueError("The result quantity value is more greatter than API supports")
 
         request_headers = {
             "Accept" : "application/json"
@@ -41,3 +44,5 @@ class Api_Consumer():
         req = requests.get(url="{}/search".format(self.BASE_URL), headers=request_headers, params=parameters)
         ret = req.content.decode("utf-8")
         ret = json.loads(ret)
+
+        return ret
