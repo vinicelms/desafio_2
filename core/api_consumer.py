@@ -13,7 +13,7 @@ class ApiConsumer():
     def search_content(self, section, date_start=None, date_end=None, qtt_results=10):
         req = None
 
-        if qtt_results > 50:
+        if qtt_results > 200:
             raise ValueError("The result quantity value is more greatter than API supports")
 
         request_headers = {

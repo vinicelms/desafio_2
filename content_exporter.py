@@ -24,7 +24,9 @@ if __name__ == "__main__":
     action="store")
     parser.add_argument("--end", help="Define a data de término de pesquisa. Formato: YYYY-MM-DD",
     action="store")
+    parser.add_argument("--resultados", help="Define a quantidade de retornos que será solicitado para API. Máximo: 200",
+    action="store")
 
     args = parser.parse_args()
 
-    export_content(section=args.section, api_key=args.key, date_start=args.start, date_end=args.end)
+    export_content(section=args.section, api_key=args.key, date_start=args.start, date_end=args.end, qtt_results=args.resultados)
