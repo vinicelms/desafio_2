@@ -25,7 +25,7 @@ if __name__ == "__main__":
     parser.add_argument("--end", help="Define a data de término de pesquisa. Formato: YYYY-MM-DD",
     action="store")
     parser.add_argument("--resultados", help="Define a quantidade de retornos que será solicitado para API. Máximo: 200",
-    action="store")
+    action="store", type=int)
 
     args = parser.parse_args()
 
