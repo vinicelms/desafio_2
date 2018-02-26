@@ -60,7 +60,7 @@ O projeto tem como base as chamadas do módulo **content_exporter.py**, podendo 
 python content_exporter.py --help
 ```
 
-Saída esperada:
+* Saída esperada:
 ```
 usage: content_exporter.py [-h] --key KEY --section SECTION [--start START]
                            [--end END] [--resultados RESULTADOS]
@@ -74,4 +74,10 @@ optional arguments:
   --resultados RESULTADOS
                         Define a quantidade de retornos que será solicitado
                         para API. Máximo: 200
+```
+
+* Parâmetros obrigatórios:
+```
+--key - Chave de acesso da API
+--section -- Seção que será buscada na API
 ```
